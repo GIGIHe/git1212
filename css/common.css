@@ -1,0 +1,180 @@
+
+.announcement{
+    padding: 30px 0;
+    min-height: 340px;
+    background: #fff;
+}
+.itm-nav{
+    width:100%;
+    margin:0px auto 15px;
+ }
+ .itm-nav span{
+    float: left;
+    font:400 16px 'Microsoft Yahei';
+    color: #333333;
+    text-align: center;
+    line-height: 2.5;
+    width: 8.18%;
+    height: 50px;
+    background: url(../images/itm.png) no-repeat center top;
+    background-size:100%;
+    transition: 0.2s;
+    margin-right: 1%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+ }
+ .itm-nav span:nth-child(1):after,.itm-nav span:nth-child(2):after{
+     content: "";
+     display: block;
+     position: absolute;
+     right: -26px;
+     top: -28px;
+     width: 60px;
+     height: 60px;
+     background: url(../images/hot.png) no-repeat center;
+ }
+ .itm-nav span.on{
+    font:400 18px 'Microsoft Yahei';
+     background: url(../images/itm-on.png) no-repeat center top;
+     background-size:100%;
+     color: #fff;
+     line-height: 2.4;
+ }
+ .itm-nav span:last-child{
+     margin-right: 0;
+ }
+ .announcement .con1 li{
+     float: left;
+     width: 30%;
+    height: 157px;
+    padding: 20px 1%;
+    border-bottom: 1px solid #e6e6e6;
+    border-radius: 4px;
+    margin-right: 4.7%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+ }
+ .announcement .con1 li h2{
+     display: flex;
+     align-items: center;
+ }
+ .announcement .con1 li .i-line{
+     width: 12px;
+     height: 24px;
+     background:url(../images/fire.png) no-repeat center;
+     margin: 0 0;
+ }
+ .announcement .con1 li:nth-child(2) .i-line{
+    width: 6px;
+    height:6px;
+    background:url(../images/dot.png) no-repeat center;
+    margin: 0 0;
+}
+.announcement .con1 li .h22{
+    font: 400 16px "microsoft yahei";
+    color: #333333;
+    margin: 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 5px;
+}
+ .announcement .con1 .notice{
+    font: 400 14px "microsoft yahei";
+    color: #666666;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    box-sizing: border-box;
+    margin: 10px auto 20px;
+ }
+ .announcement .con1 li:hover{
+     background: #f3f6f8;
+ }
+ .announcement .con1 li:nth-child(3n){
+     margin-right: 0;
+ }
+ .announcement  .dtime{
+     float: left;
+     font:400 12px 'Microsoft Yahei';
+     color: #808080;
+ }
+ .announcement  .collect{
+     float: right;
+     transition: 0.2s;
+     cursor: pointer;
+ }
+ .announcement  .collect span{
+    float: right;
+    font:400 12px 'Microsoft Yahei';
+    color: #808080;
+    line-height: 1;
+    margin-left: 5px;
+}
+.announcement  .collect .col-i{
+    float: left;
+    width: 14px;
+    height: 13px;
+    background: url(../images/star.png) no-repeat center;
+}
+.announcement  .collect.col-i-a .col-i{
+    background: url(../images/star-on.png) no-repeat center;
+}
+.announcement  .collect .col-i-no{
+    background: url(../images/nostar.png) no-repeat center;
+}
+/* .announcement  .collect.col-i-a span{
+    color: #808080;
+} */
+.announcement .coll-num{
+    font:400 12px 'Microsoft Yahei';
+    color: #999999;
+    position: relative;
+    text-indent: 15px;
+    margin-bottom: 10px;
+}
+.announcement .coll-num::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background: url(../images/ctj.png) no-repeat center;
+}
+.announcement .coll-num span{
+    font:400 12px 'Microsoft Yahei';
+    color: #999999;
+}
+
+@media screen and (max-width: 1700px) {
+    .itm-nav span.on{
+        line-height: 2.2;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .itm-nav span.on{
+        line-height: 2.2;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .itm-nav span{
+        line-height: 2;
+    }
+    .itm-nav span.on{
+        line-height: 1.8;
+    }
+}
+@media screen and (max-width: 1270px) {
+    .itm-nav span{
+        line-height: 1.8;
+    }
+    .itm-nav span.on{
+        line-height: 1.6;
+    }
+}

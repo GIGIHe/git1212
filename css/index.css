@@ -1,0 +1,207 @@
+
+.formbox{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+.formbox .form{
+    background: #fff;
+    padding: 10px 20px 90px;
+    margin-bottom: 40px;
+}
+.formbox .form h4{
+    font: 400 12px "Microsoft Yahei";
+    color: #999999;
+    position: relative;
+    text-indent: 15px;
+    margin-bottom: 18px;
+}
+.formbox .form h4::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    background: url(../images/ic1.png) no-repeat center;
+}
+.hide {
+    display: none;
+}
+.formbox li{font-size:0;margin-bottom: 15px;}
+/* .formbox .no-borderbot{border-bottom:none;} */
+.formbox a{
+    display:inline-block;
+    padding:4px 7px;
+    text-align:center;
+    font:400 14px "Microsoft Yahei";
+    border-radius: 4px;
+    margin-left: 2%;
+}
+.formbox strong{
+    display:inline-block;
+    font:500 14px "Microsoft Yahei";
+    padding:4px;
+    margin-right: 22px;
+    color: #000000;
+    width:70px;
+    text-align-last:justify;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    transition: 0.2s;
+}
+.formbox a.show {
+    background-color: #108ee9;
+    color: #ffffff;
+    position: relative;
+}
+.formbox input#zhuanye{
+    border-bottom: 1px solid #cccccc;
+    font:500 14px "Microsoft Yahei";
+    color: #999999;
+    width: 400px;
+}
+.formbox input#submit{
+    display: block;
+    font:500 16px/50px "Microsoft Yahei";
+    color: #ffffff;
+    background: #108ee9;
+    margin: 65px auto 0;
+    width: 440px;
+    height: 50px;
+    border-radius: 4px;
+}
+.item_check{
+  display: inline-block;
+  color: #000000;
+  font:500 14px "Microsoft Yahei";
+  margin: 0 4% 0 2%;
+  transition: 0.2s;
+  background: url(../images/selected.png) no-repeat left center;
+  background-size: 16px 16px;
+  text-indent: 26px;
+  cursor: pointer;
+}
+.item_check.active{
+background: url(../images/active.png) no-repeat left center;
+  background-size: 16px 16px;
+  color: #108ee9;
+}
+.notice{
+    display: inline-block;
+    color: #000000;
+    font:500 14px "Microsoft Yahei";  
+}
+.notice span{
+    color: #fa4633;
+}
+/* result */
+.result{
+    padding-bottom: 50px;
+}
+.result .res_con .res_tit{
+    height: 24px;
+    margin-bottom: 26px;
+    background:url(../images/result-t.png) no-repeat center top;
+}
+#list{
+    width: 100%;
+}
+#list li{
+    float: left;
+    width: 30%;
+    margin-left: 3%;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 2%;
+    box-sizing: border-box;
+}
+#list .xm_img{
+    width: 25%;
+    float: left;
+    margin-right: 5%;
+}
+#list li img{
+    width: 100%;
+}
+#list li .desl{
+    float: left;
+    width: 70%;
+}
+#list li .desl h2{
+    color: #333333;
+    font:600 22px "Microsoft Yahei";  
+}
+#list li .desl .bs-time,#list li .desl .bs-sub{
+    color: #666666;
+    font:500 16px "Microsoft Yahei";  
+}
+#list li .desl .bs-time{
+    margin: 5.6% auto;
+}
+#list li .desl .bs-sub p{
+    float: left;
+    width: 63%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#list li .desl .bs-sub a{
+    float: left;
+    color: #0a83dc;
+    font:500 16px "Microsoft Yahei";  
+    text-decoration: underline;
+}
+#list li.no_res{
+    float: none;
+    width: 661px;
+    height: 384px;
+    margin: auto;
+    background: none;
+    padding: 0 0;
+}
+#list li.no_res img{
+    display: block;
+    width: 661px;
+    height: 384px;
+}
+.res_con .no_res p{
+    color: #999999;
+    font:500 16px "Microsoft Yahei";  
+    text-align: center;
+}
+@media screen and (max-width: 1700px) {
+    #list li .desl .bs-time {
+        margin: 3.6% auto;
+    }
+    #list li{
+        padding: 1.4%;
+    }
+}
+@media screen and (max-width: 1510px) {
+    #list li .desl .bs-time, #list li .desl .bs-sub {
+        font: 500 14px "Microsoft Yahei";
+    }
+    #list li .desl .bs-sub p {
+        font-size: 14px;
+    }
+    #list li .desl .bs-sub a {
+        font: 500 14px "Microsoft Yahei";
+    }
+}
+@media screen and (max-width: 1366px){
+    #list .xm_img {
+        width: 23%;
+    }
+    #list li .desl {
+        float: left;
+        width: 71%;
+    }
+    #list li .desl h2 {
+        font: 600 20px "Microsoft Yahei";
+    }
+    #list li .desl .bs-time {
+        margin: 1.6% auto;
+    }
+}

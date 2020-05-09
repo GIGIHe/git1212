@@ -1,0 +1,291 @@
+
+.wrap{
+    min-height: 710px;
+    background: #fff;
+    padding: 35px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.log_head{
+    padding: 10px 0;
+}
+.zg_head img#logo2{
+    float: left;
+    width: 227px;
+    height: 50px;
+}
+.zg_head span.line{
+    float: left;
+    width: 1px;
+    height: 30px;
+    margin: 20px 25px;
+    background: #d8d8d8;;
+}
+.zg_head p.h1{
+    float: left;
+    font: 400 24px/68px "Microsoft Yahei";
+    color: #000000; 
+}
+.h2{
+    font: 400 16px "Microsoft Yahei";
+    color: #666666; 
+    margin-bottom: 14px;
+}
+.bor{
+  height: 1px;
+  background: #e8e8e8;
+  margin-bottom: 35px;
+}
+.steps{
+    display: flex;
+    margin-bottom: 35px;
+}
+.steps li{
+    /* float: left; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.2s;
+    margin-bottom: 45px;
+}
+.steps li:nth-child(1){
+    width: 10%;
+}
+.steps li:nth-child(2){
+    width: 36%;
+}
+.steps li:nth-child(3){
+    width: 11%;
+}
+.steps li:nth-child(4){
+    width: 36%;
+}
+.steps li:nth-child(5){
+    width: 8%;
+}
+.steps li span{
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font: 400 14px/24px "Microsoft Yahei";
+  color: #cccccc; 
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  margin:0 0;
+}
+.steps li.on span{
+    background: #108ee9;
+    color: #fff;
+    border: 1px solid transparent;
+}
+.steps li.active span{
+    background: url(../images/ok.png) no-repeat center;
+    border: 1px solid transparent;
+    font-size: 0;
+}
+.steps li p{
+    font: 400 14px/24px "Microsoft Yahei";
+    color: #cccccc; 
+    margin:0 0;
+  }
+  .steps li em{
+      width:100%;
+      height: 1px;
+      background: #cccccc;
+      margin-top: 12px;
+      margin:0 0;
+  }
+  .ret_form{
+      /* width: 56%; */
+  }
+  .ret_form1, .ret_form2{
+    width: 430px;
+}
+  .ret_form p{
+      width: 50%;
+      height: 40px;
+      margin-bottom: 30px;
+  }
+  .ret_form1 p,.ret_form2 p{
+    width: 430px;
+  }
+  .ret_form p span{
+    float: left;
+    width: 20%;
+    font: 400 14px/40px "Microsoft Yahei";
+    color: #666666; 
+  }
+  .ret_form1 p span,.ret_form2 p span{
+    width: 21%;
+  }
+  .ret_form p input,.ret_form p select{
+    float: left;
+    width: 79%;
+    height: 100%;
+    font: 400 14px/40px "Microsoft Yahei";
+    color: #666666;
+    border: 1px solid #d9d9d9;
+    padding-left: 4px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+.ret_form p input:focus{
+    border:1px solid #108ee9;
+}
+.ret_form p input.yzm{
+    width: 59%;
+    border-right: none;
+}
+.ret_form1 p input.yzm,.ret_form2 p input.yzm{
+ width: 52%;
+}
+.ret_form p .getyzm{
+    float: left;
+    width: 20%;
+   font: 400 14px/40px "Microsoft Yahei";
+   color: #fff; 
+   text-align: center;
+   background: #108ee9;
+}
+.ret_form1 p .getyzm,.ret_form2 p .getyzm {
+    width: 27%;
+}
+.ret_form p select{
+    background: url(../images/slect.png) no-repeat center right;
+}
+.ret_form input.submit{
+    display: block;
+    width: 80px;
+    height: 40px;
+    font: 400 16px/40px "Microsoft Yahei";
+    color: #fff; 
+    text-align: center;
+    background: #108ee9;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+.ret_form1 input.submit,.ret_form2 input.submit{
+    width: 79%;
+    margin-left: 21%;
+}
+.sigin a{
+    float: right;
+    text-align: right;
+    font: 400 16px "Microsoft Yahei";
+    color: #108ee9; 
+}
+.ret_form p  i{
+    display: none;
+    font: 400 14px "Microsoft Yahei";
+    color: #ff4957;
+    margin-left: 20%;
+}
+.step3 img{
+    display: block;
+    width: 64px;
+    height: 64px;
+}
+.step3 p{
+    text-align: center;
+    margin: 30px auto;
+}
+.step3 a{
+    display: block;
+    width: 100px;
+    height: 40px;
+    font: 400 14px/40px "Microsoft Yahei";
+    color: #fff;
+    text-align: center;
+    background: #108ee9;
+    border-radius: 6px;
+}
+/* login.html tab*/
+.navs_tab{
+   height: 54px;
+   border-bottom: 1px solid #d8d8d8;
+   margin-bottom: 40px;
+
+}
+.navs_tab .nav_box{
+    width: 370px;
+    position: relative;
+}
+.navs_tab .sign_tab{
+    float: left;
+    width: 50%;
+    font: 400 18px/54px "Microsoft Yahei";
+    color: #bfbfbf;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.navs_tab .sign_tab i{
+    width: 24px;
+    height: 54px;
+    margin: 0 0;
+    margin-right: 8px;
+}
+.navs_tab .sign_tab:nth-child(1) i{
+    background: url(../images/log.png) no-repeat center;
+}
+.navs_tab .sign_tab.on:nth-child(1) i{
+    background: url(../images/log_on.png) no-repeat center;
+}
+.navs_tab .sign_tab:nth-child(2) i{
+    background: url(../images/reset.png) no-repeat center;
+}
+.navs_tab .sign_tab.on:nth-child(2) i{
+    background: url(../images/reset_on.png) no-repeat center;
+}
+.navs_tab .sign_tab span{
+    margin: 0 0;
+    font: 400 18px/54px "Microsoft Yahei";
+    color: #bfbfbf;
+}
+.navs_tab .sign_tab.on span{
+    color: #108ee9;
+}
+.slider{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background: #108ee9;
+}
+.log_item{
+    width: 430px;
+}
+.log_item a{
+    font: 400 14px"Microsoft Yahei";
+    color: #108ee9;
+}
+.log_item a.a2{
+ float: right;
+}
+.log_item a.a1{
+    float: left;
+    margin-left:20%;
+   }
+
+
+@media screen and (max-width: 1700px) {
+    .steps li:nth-child(1){
+        width: 12%;
+    }
+    .steps li:nth-child(2){
+        width: 33%;
+    }
+    .steps li:nth-child(3){
+        width: 14%;
+    }
+    .steps li:nth-child(4){
+        width: 33%;
+    }
+    .steps li:nth-child(5){
+        width: 8%;
+    }
+}

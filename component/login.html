@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>北京中公教育公职考试职位匹配检索系统-查找合适你报考的职位</title>
+    <meta name="Keywords" content="公务员考试职位检索,军队文职考试职位表查询,公职考试职位有哪些" />
+    <meta name="Description" content="北京中公教育推出职位匹配检索系统，通过输入学历、工作经验等条件查找适合报考的岗位。" />
+	<!-- pc端地域标签 -->
+	<meta name="location" content="province=北京;city=北京">
+	<meta name="mobile-agent" content="format=html5; url=">
+	<meta name="applicable-device" content="pc">
+	<meta http-equiv="Cache-Control" content="no-transform" />
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<!-- pc端地域标签 -->
+	<link rel="stylesheet" href="http://bj.offcn.com/zg/common/css/animate.wow.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/log.css">
+    <link rel="stylesheet" href="http://bj.offcn.com/zg/common/css/swiper.min.css">
+    <script src="http://bj.offcn.com/zg/common/js/jquery.min.js"></script>
+	<script src=" http://bj.offcn.com/zg/common/js/wow.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/loginphp.js"></script>
+	<!-- pc端的适配 -->
+	<script type="text/javascript">
+	 function browserRedirect() {
+		var sUserAgent = navigator.userAgent.toLowerCase();  
+		var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";  
+		var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";  
+		var bIsMidp = sUserAgent.match(/midp/i) == "midp";  
+		var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";  
+		var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";  
+		var bIsAndroid = sUserAgent.match(/android/i) == "android";  
+		var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";  
+		var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";  
+		if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+			window.location.href = 'http://m.bj.offcn.com/zg//'+window.location.search;
+		}
+	}
+	browserRedirect();
+	</script>
+	<!-- 分校百度统计代码 -->
+<!-- <script type="text/javascript" src="http://www.offcn.com/statics/js/bdtop.js"></script> -->
+</head>
+<body style="overflow-x:hidden">
+
+<div class="zgbox">
+    <!-- header -->
+   <div class="zg_head log_head">
+     <div class="layout clearfix ">
+        <img src="../images/logo02.png" alt="" id="logo2">
+        <span class="line"></span>
+        <p class="h1">考试匹配查询系统</p>
+     </div>
+   </div>
+    <div class="log_form">
+        <div class="layout wrap">
+            <div class="navs_tab">
+                <div class="clearfix nav_box">
+                    <div class="sign_tab on clearfix">
+                        <i></i>
+                        <span>登录</span>
+                    </div>
+                    <div class="sign_tab clearfix">
+                        <i></i>
+                        <span>注册</span>
+                    </div>
+                    <div class="slider"></div>
+                </div>
+            </div>
+            <div class="ret_form ret_form1" >
+                <p class="cleafix">
+                    <span>手机号码：</span>
+                    <input type="text" placeholder="请输入手机号码" class="phone" id="phone1">
+                </p>
+                <p class="cleafix">
+                    <span>密码：</span>
+                    <input type="password" placeholder="请输入密码" id="pass1" class="pass">
+                </p>
+                <input type="button" class="submit" id="submit" value="登录">
+                <div class="log_item clearfix">
+                    <a href="javascript:;"  class="a2" id="pass_fgot">忘记密码 ？</a>
+                </div>
+            </div>
+            <div class="ret_form ret_form2" style="display: none;">
+                <p class="cleafix">
+                    <span>姓名：</span>
+                    <input type="text" placeholder="请输入姓名" class="username" id="username">
+                </p>
+                <p class="cleafix">
+                    <span>手机号码：</span>
+                    <input type="text" placeholder="请输入手机号码" class="phone" id="phone">
+                </p>
+                <p class="cleafix">
+                    <span>验证码：</span>
+                    <input type="text" placeholder="请输入验证码" id="yzm" class="yzm">
+                    <a href="javascript:;" id="getyzm1"  class="getyzm">发送验证码</a>
+                </p>
+                <p class="cleafix">
+                    <span>考试类型：</span>
+                    <select name="kslx" id="kslx">
+                        <option value="" disabled selected>请输入考试类型</option>
+                        <option value="国考">国考</option>
+                        <option value="京考">京考</option>
+                        <option value="事业单位">事业单位</option>
+                        <option value="军队文职">军队文职</option>
+                        <option value="教师资格">教师资格</option>
+                        <option value="教师招聘">教师招聘</option>
+                        <option value="考研">考研</option>
+                        <option value="国企">国企</option>
+                        <option value="银行">银行</option>
+                        <option value="选调生">选调生</option>
+                        <option value="遴选">遴选</option>
+                        <option value="医疗">医疗</option>
+                        <option value="社区">社区</option>
+                    </select>
+                </p>
+                <p class="cleafix">
+                    <span>登录密码：</span>
+                    <input type="password" placeholder="请设置6-18位登录密码" class="pass" id="pass">
+                    <i>您输入的密码过于简单，请重新输入</i>
+                </p>
+                <p class="cleafix">
+                    <span>确认密码：</span>
+                    <input type="password" placeholder="请再一次输入登录密码" class="re_pass" id="re_pass">
+                    <i>密码不一致，请重新输入</i>
+                </p>
+                <input type="button" class="submit" id="zhuce" value="立即注册">
+                
+            </div>
+        </div>
+    </div>
+    <!--foot 底部调用版权 START-->
+    <div class="copyright">
+        <div class="copyright_warp w">
+                <div class="copyrightc">
+                    Copyright&copy;1999-<span class="year"></span><span id="zg_sp">&nbsp;</span><a href="http://www.offcn.com/about/" rel="nofollow" target="_blank">北京中公教育科技有限公司</a> .All Rights Reserved<br>
+                    全国统一报名专线：400-6300-999 网校报名：400-900-8885 图书订购：400-6509-705<br>
+                    京ICP备10218183号 京ICP证161188号 京公网安备 11010802020593号 出版物经营许可证新出发京批字第直130052号
+                </div>
+        </div>
+    </div>
+    <!--foot 底部调用版权 END-->  
+</div>
+<!-- fixed_r -->
+<!-- <script src="http://bj.offcn.com/zg/zg_slideR/"></script> -->
+
+<script src="http://bj.offcn.com/zg/zg_tuiguang/"></script>
+
+<script>
+var _hmt = _hmt || [];
+
+(function() {
+
+  var hm = document.createElement("script");
+
+  hm.src = "https://hm.baidu.com/hm.js?4d997e72f9176f2cfe0746b710c46d55";
+
+  var s = document.getElementsByTagName("script")[0]; 
+
+  s.parentNode.insertBefore(hm, s);
+
+})();
+</script>
+<script type="text/javascript" src="http://www.offcn.com/statics/js/bdtj_bj.js"></script>
+<script type="text/javascript" src=" http://www.offcn.com/statics/js/bdbot.js"></script>
+<script type="text/JavaScript" src="http://bj.offcn.com/statics/js/zgjs/xiaoneng.js"></script>
+</body>
+</html>

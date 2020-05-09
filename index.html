@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>北京中公教育公职考试职位匹配检索系统-查找合适你报考的职位</title>
+    <meta name="Keywords" content="公务员考试职位检索,军队文职考试职位表查询,公职考试职位有哪些" />
+    <meta name="Description" content="北京中公教育推出职位匹配检索系统，通过输入学历、工作经验等条件查找适合报考的岗位。" />
+	<!-- pc端地域标签 -->
+	<meta name="location" content="province=北京;city=北京">
+	<meta name="mobile-agent" content="format=html5; url=">
+	<meta name="applicable-device" content="pc">
+	<meta http-equiv="Cache-Control" content="no-transform" />
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<!-- pc端地域标签 -->
+	<link rel="stylesheet" href="http://bj.offcn.com/zg/common/css/animate.wow.css">
+	<link rel="stylesheet" href="./css/public.css">
+	<link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="http://bj.offcn.com/zg/common/css/swiper.min.css">
+    <script src="http://bj.offcn.com/zg/common/js/jquery.min.js"></script>
+	<script src=" http://bj.offcn.com/zg/common/js/wow.min.js"></script>
+    <script src='./js/bootstrap-typeahead.js'></script>
+    <script src="./data/zy.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./data/annoce.js"></script>
+    <script src="./data/loginphp.js"></script>
+    <script src="./js/searchphp.js"></script>
+	<!-- pc端的适配 -->
+	<script type="text/javascript">
+	 function browserRedirect() {
+		var sUserAgent = navigator.userAgent.toLowerCase();  
+		var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";  
+		var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";  
+		var bIsMidp = sUserAgent.match(/midp/i) == "midp";  
+		var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";  
+		var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";  
+		var bIsAndroid = sUserAgent.match(/android/i) == "android";  
+		var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";  
+		var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";  
+		if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+			window.location.href = 'http://m.bj.offcn.com/zg//'+window.location.search;
+		}
+	}
+	browserRedirect();
+	</script>
+	<!-- 分校百度统计代码 -->
+<!-- <script type="text/javascript" src="http://www.offcn.com/statics/js/bdtop.js"></script> -->
+</head>
+<body style="overflow-x:hidden">
+
+<div class="zgbox">
+    <!-- header -->
+    <div class="zg_head">
+        <div class="layout clearfix">
+            <div class="head_fr fr">
+                <a href="./component/login.html" class="user user_no fl"></a>
+                <ul class="user user_log fl">
+                    <li class="user_name">
+                        <span></span>
+                        <ul class="downdp">
+                            <em></em>
+                            <li>
+                                <a href="javascript:;" class="tel_msg">
+                                <i> 账户ID：</i> <strong></strong>
+                                </a>
+                                <a href="./component/reset.html" >
+                                    修改密码
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <span class="logout fl">退出</span>
+            </div>
+            <div class="head_fl fl clearfix">
+                <div class="logo_img fl">
+                    <img src="./images/zg_logo.png" alt="">
+                </div>
+                <div class="head_navs clearfix fl">
+                    <a href="javascript:;" class="on">考试检索</a>
+                    <a  href="./hot.html">热门活动</a>
+                    <a href="./announce.html">近期公告</a>
+                    <a href="./kq.html" >考情须知</a>
+                    <a href="./collect.html">我的收藏</a>
+                    <i></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ban -->
+    <div class="ban" id="ban"></div>
+    <!-- search -->
+    <div class="formbox">
+        <div class="layout form">
+            <h4>选择自身条件，一键查询适合你的考试</h4>
+            <ul class="search_ul">
+                <li>
+                    <input type="text" value="京籍" class="hide" id="province">
+                    <strong>户       籍：</strong>
+                    <a href="javascript:void(0);" class="show">京籍</a>
+                    <a href="javascript:void(0);">非京籍</a>
+                </li>
+                <li>
+                    <input type="text" value="北京" class="hide" id="xuexiao">
+                    <strong>毕业院校：</strong>
+                    <a href="javascript:void(0);" class="show">北京</a>
+                    <a href="javascript:void(0);">非北京</a>
+                </li>
+                <li>
+                    <input type="text" value="应届生" class="hide" id="shenfen">
+                    <strong>身份：</strong>
+                    <a href="javascript:void(0);" class="show">应届生</a>
+                    <a href="javascript:void(0);">社会人员</a>
+                </li>
+                <li>
+                    <input type="text" value="全日制" class="hide" id="culture">
+                    <strong>学习方式：</strong>
+                    <a href="javascript:void(0);" class="show">全日制</a>
+                    <a href="javascript:void(0);" >非全日制</a>
+                </li>
+                <li>
+                    <input type="text" value="本科" class="hide" id="xueli">
+                    <strong>学历：</strong>
+                    <a href="javascript:void(0);"  class="show">本科</a>
+                    <a href="javascript:void(0);">博士生 </a>
+                    <a href="javascript:void(0);" >大专 </a>
+                    <a href="javascript:void(0);" >其他 </a>
+                </li>
+                <li>
+                    <input type="text" value="18-25" class="hide" id="age">
+                    <strong>年龄：</strong>
+                    <a href="javascript:void(0);" class="show">18-25</a>
+                    <a href="javascript:void(0);" >25-35</a>
+                    <a href="javascript:void(0);" >35-50</a>
+                    <a href="javascript:void(0);" >不限</a>
+                </li>
+                <li>
+                    <strong>专业：</strong>
+                    <input type="text" id="zhuanye" autocomplete="off"  value="专业不限" placeholder="专业不限">
+                    <div class="item_check item_check_zy"><span></span>不限</div>
+                    <p class="notice"><span>*</span>以上条件非必填项（<span>专业“不限”开启，即含不限专业的职位</span> ）</p>
+                </li>
+                <input type="button" id = "submit" value = "查询职位">
+            </ul>
+        </div>
+    </div>
+    <!-- result -->
+    <div class="result">
+        <div class="layout res_con">
+            <h2 class="res_tit"></h2>
+            <ul id="list" class="clearfix"> 
+                <!-- 国家公务员 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                        <h2 title="国家公务员">国家公务员</h2>			
+                        <div class="bs-time" title="10月中旬">10月中旬</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="行测+申论">行测+申论</p>				
+                            <a href="http://bj.offcn.com/html/2020/01/218893.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                    </div>
+                </li>
+                <!-- 北京公务员 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                        <h2 title="北京公务员">北京公务员</h2>			
+                        <div class="bs-time" title="11月中旬">11月中旬</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="行测+申论">行测+申论</p>				
+                            <a href="http://bj.offcn.com/html/2019/11/211346.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                    </div>
+                </li>
+                <!-- 银行 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                        <h2 title="银行">银行</h2>			
+                        <div class="bs-time" title="4月中下旬">4月中下旬</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="行政职业能力测试、英语、综合知识、性格测试">行政职业能力测试、英语、综合知识、性格测试</p>				
+                            <a href="http://bj.jinrongren.net/yh/2020/0321/11103.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                    </div>
+                </li>
+                <!-- 社区 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                    <h2 title="社区">社区</h2>			
+                    <div class="bs-time" title="依据考试公告详情定">依据考试公告详情定</div>			
+                    <div class="bs-sub clearfix">			
+                        <p title="公共管理、法律基础、社会建设知识、社区工作者相关知识、写作">公共管理、法律基础、社会建设知识、社区工作者相关知识、写作</p>				
+                        <a href="http://bj.zgjcks.com/shequ/kszx/202004/4706.html" target="_blank">查看详情&gt;&gt;</a>				
+                    </div>
+                </div>
+                </li>
+                <!-- 考研 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                <div class="xm_img"><img src="./images/jing.png"></div>			
+                <div class="desl"> 
+                <h2 title="考研">考研</h2>			
+                <div class="bs-time" title="8月发布">8月发布</div>			
+                    <div class="bs-sub clearfix">			
+                        <p title="思想政治理论、管理类联考综合能力、 外国语、 业务课一、业务课二">思想政治理论、管理类联考综合能力、 外国语、 业务课一、业务课二</p>				
+                        <a href="http://bj.kaoyan365.cn/yanzhaoxinxi/bjkyfsx/78340.html" target="_blank">查看详情&gt;&gt;</a>				
+                    </div>
+                </div>
+                </li>
+                <!-- 军队文职 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                    <h2 title="军队文职">军队文职</h2>			
+                    <div class="bs-time" title="依据考试公告详情定">依据考试公告详情定</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="公共科目+专业科目">公共科目+专业科目</p>				
+                            <a href="http://bj.zgjcks.com/jdwz/kszx/201903/5.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                    </div>
+                </li>
+                    <!-- 国企 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                    <h2 title="国企">国企</h2>			
+                    <div class="bs-time" title="4月11日">4月11日</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="行测+部分专业知识">行测+部分专业知识</p>				
+                            <a href="http://bj.zggqzp.com/2020/zpgg_0331/6210.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                    </div>
+                </li>
+                <!-- 遴选 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                    <h2 title="遴选">遴选</h2>			
+                    <div class="bs-time" title="依据考试公告详情定">依据考试公告详情定</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="案例分析  公文写作  机关实务  文章写作  公共基础知识">案例分析  公文写作  机关实务  文章写作  公共基础知识</p>				
+                            <a href="http://bj.offcn.com/html/2020/01/219641.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                        </div>
+                </li>
+                <!-- 事业单位 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                    <h2 title="事业单位">事业单位</h2>			
+                    <div class="bs-time" title="依据考试公告详情定">依据考试公告详情定</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="公共基本能力（公基、行测、写作）">公共基本能力（公基、行测、写作）</p>				
+                            <a href="http://bj.zgsydw.com/zhaopin/20200417/6402_1.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                        </div>
+                </li>
+                <!-- 选调生 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                    <h2 title="选调生">选调生</h2>			
+                    <div class="bs-time" title="10月-11月">10月-11月</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="考试科目行测申论">考试科目行测申论</p>				
+                            <a href="http://bj.offcn.com/html/2020/04/234993.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                        </div>
+                </li>
+                <!-- 教师招聘 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                    <h2 title="教师招聘">教师招聘</h2>			
+                    <div class="bs-time" title="依据考试公告详情定">依据考试公告详情定</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="教育综合知识+公共基础知识">教育综合知识+公共基础知识</p>				
+                            <a href="http://bj.zgjsks.com/html/2020/ksgg_0330/21000.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                        </div>
+                </li>
+                <!-- 教师资格 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                    <h2 title="教师资格">教师资格</h2>			
+                    <div class="bs-time" title="笔试10月31日">笔试10月31日</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="综合素质+教育教学知识与能力">综合素质+教育教学知识与能力</p>				
+                            <a href="http://bj.zgjsks.com/html/2019/kszx_0301/17230.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                        </div>
+                </li>
+                <!-- 医疗 -->
+                <li class="clearfix wow bounceInUp animated">		  
+                    <div class="xm_img"><img src="./images/jing.png"></div>			
+                    <div class="desl"> 
+                    <h2 title="医疗">医疗</h2>			
+                    <div class="bs-time" title="依据考试公告详情定">依据考试公告详情定</div>			
+                        <div class="bs-sub clearfix">			
+                            <p title="专业知识">专业知识</p>				
+                            <a href="http://bj.yixue99.com/2020/zpgg_0402/7855.html" target="_blank">查看详情&gt;&gt;</a>				
+                        </div>
+                        </div>
+                </li>
+                <li class="no_res wow fadeInUp">
+                    <img src="./images/no_res.png" alt="">
+                    <p>该类项目暂时没有适合你的岗位哦~</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="zg_cover"></div>
+    <!-- 使用说明-->
+    <div class="zg_direction"> 
+        <span class="direction_close">&nbsp;</span>
+        <h6>使用说明</h6>
+        <ul class="direction_list">
+            <li> 1.<span>本系统收录了北京各类考试报考条件，考生可根据自身条件（户籍，学历，身份，年龄等）一键匹配适合备考的考试。</span>因每年招考信息会稍有调整，具体报考条件以最新公告为准。</li>
+            <li> 2. 本系统是根据您的自身条件去匹配您能够报考的考试，若无匹配项，可更换条件查询！</li>
+            <li>3. 请尝试使用谷歌，火狐浏览器或使用360浏览器，搜狗浏览器，QQ浏览器急速版来提升您的使用体验！</li>
+            <li>4. 如果使用过程中遇到了问题，请点击<a onClick="NTKF.im_openInPageChat('kf_10353_1536732545828')" rel="nofollow" style="cursor: pointer;">【在线咨询】</a>。或者拨打电话： <a href="tel:010-82838321">010-82838321</a> 。</li>
+            <li>5.点击<a href="http://qm.qq.com/cgi-bin/qm/qr?k=X0JFCLf0E1W75y_hH9_KcXxnY13ziz3f&authKey=95H9H0%2FC0%2BgVhDfHzmBZ8cgGYimN37hFg59pua%2BxUq5rwAdsS7ffQlPzDckjzhRz&group_code=429742792" target="_blank" class="qq">【加入意向考试的QQ群】</a> 和小伙伴们一起并肩作战，随时随地交流备考经验。</li>
+        </ul>
+        <span class="direction_know">我知道了</span>
+    </div>
+    <!--foot 底部调用版权 START-->
+    <div class="copyright">
+    <div class="copyright_warp w">
+            <div class="copyrightc">
+                Copyright&copy;1999-<span class="year"></span><span id="zg_sp">&nbsp;</span><a href="http://www.offcn.com/about/" rel="nofollow" target="_blank">北京中公教育科技有限公司</a> .All Rights Reserved<br>
+                全国统一报名专线：400-6300-999 网校报名：400-900-8885 图书订购：400-6509-705<br>
+                京ICP备10218183号 京ICP证161188号 京公网安备 11010802020593号 出版物经营许可证新出发京批字第直130052号
+            </div>
+    </div>
+</div>
+<!--foot 底部调用版权 END-->
+</div>
+<script>
+    $('#ban').load('./component/common.html')
+</script>
+<!-- fixed_r -->
+<!-- <script src="http://bj.offcn.com/zg/zg_slideR/"></script> -->
+
+<script src="http://bj.offcn.com/zg/zg_tuiguang/"></script>
+
+<script src="http://dl.offcn.com/aa/bj/zg_dataList.js" type="text/javascript" charset="utf-8"></script>
+<script>
+var _hmt = _hmt || [];
+
+(function() {
+
+  var hm = document.createElement("script");
+
+  hm.src = "https://hm.baidu.com/hm.js?4d997e72f9176f2cfe0746b710c46d55";
+
+  var s = document.getElementsByTagName("script")[0]; 
+
+  s.parentNode.insertBefore(hm, s);
+
+})();
+</script>
+<script type="text/javascript" src="http://www.offcn.com/statics/js/bdtj_bj.js"></script>
+<script type="text/javascript" src=" http://www.offcn.com/statics/js/bdbot.js"></script>
+<script type="text/JavaScript" src="http://bj.offcn.com/statics/js/zgjs/xiaoneng.js"></script>
+</body>
+</html>
